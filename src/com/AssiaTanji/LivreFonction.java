@@ -3,6 +3,8 @@ package com.AssiaTanji;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -56,8 +58,31 @@ public class LivreFonction {
 		nb=LivreDB.Maj(sql);
 		LivreDB.disconnect();
 				
-			return nb;	 
+			return nb;	 			
+	}
+	// CONSULT ALL BOOK
+	public static List<Livre> consultAllBook()
+	{
+		List<Livre> lu=new ArrayList<Livre>();
+		LivreDB.connect();
+		ResultSet rs = LivreDB.select("select * from livre");
+		try {
+			while(rs.next())
+			{
+				Livre l =new Livre();
+				l.setIdLivre(rs.getInt(1));
+				l.setTitre(rs.getString(2));
+				l.setAuteur(rs.getString(3));
+				l.setCategorie(rs.getString(4));
+				lu.add(l);
 				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return lu;
+		
 	}
 	
 	

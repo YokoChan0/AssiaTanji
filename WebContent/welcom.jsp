@@ -80,10 +80,10 @@
      <p>Vous pouvez Acces d'un livre soit par : </p>
      <a href="http://localhost:8082/TanjiAssia/EnterCategorie.jsp"  class="w-100 btn btn-lg btn-primary" role="button"> Recherche par categorie</a><br>
       <p>ou par : </p>
-       <a href="http://localhost:8082/TanjiAssia/EnterAuteur.jsp"  class="w-100 btn btn-lg btn-primary" role="button"> lister par auteur</a>
+       <a href="http://localhost:8082/TanjiAssia/EnterAuteur.jsp"  class="w-100 btn btn-lg btn-primary" role="button"> lister par auteur</a><br><br>
+       <a href="ConsultAllBookServlet"  class="w-100 btn btn-lg btn-primary" role="button"> Consulter tout les livres</a><br>
        <br><br><p class="ajouterlivre">Voulez-vous ajouter un autre livre : </p>
         <a href="http://localhost:8082/TanjiAssia/AddBook.jsp"  class="w-100 btn btn-lg btn-primary" role="button"> Ajouter livre</a>
-       
 </div>
 
 
